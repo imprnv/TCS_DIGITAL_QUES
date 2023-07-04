@@ -1,5 +1,5 @@
 public class second_largest_element {
- public    int secondlargest(int arr [],int n ) {
+ static   int secondlargest(int arr [],int n ) {
         int largest = 0;int res = -1;
         for (int i = 0; i <n ; i++) {
             if(arr[i]>arr[largest]) {
@@ -7,7 +7,7 @@ public class second_largest_element {
                 largest = i;
             }
             else if (arr[i]!=arr[largest]){
-                if(arr[i]>arr[res] || res==-1)
+                if(res ==-1 || arr[i]>arr[res])
                     res = i;
             }
 
@@ -17,7 +17,8 @@ public class second_largest_element {
 
     public static void main(String[] args) {
         int a [] = {12 ,12 ,12 ,12 ,7 ,8 , 9 };
-        System.out.println(se);
+        System.out.println(secondlargest(a,a.length-1));
+
 
     }
 }
